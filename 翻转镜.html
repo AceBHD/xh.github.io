@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标移动到图片上</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ii {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .6;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .father {
+            position: relative;
+            transform-style: preserve-3d;
+            width: 700px;
+            height: 700px;
+            margin: 15px auto;
+            transition: all 2s;
+        }
+
+        .father:hover {
+            transform: rotateY(180deg);
+        }
+
+        .z {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: url(images/001.jpg) no-repeat top center;
+            z-index: 1;
+            /* 设置盒子背面不可见 */
+            backface-visibility: hidden;
+        }
+
+        .f {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: url(images/002.jpg) no-repeat top center;
+            transform: rotateY(180deg);
+            /* 设置盒子背面不可见 */
+            backface-visibility: hidden;
+        }
+
+        .a1 {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            text-decoration: none;
+            color: red;
+            font-size: 48px;
+        }
+
+        .a2 {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            text-decoration: none;
+            color: red;
+            font-size: 48px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/bj.jpg" alt="" class="ii">
+    <div class="father">
+        <div class="z"></div>
+        <div class="f"></div>
+    </div>
+    <a href="index.html" class="a1">点我上一页</a>
+    <a href="旋转木马.html" class="a2">点我下一页</a>
+
+    <script>
+        alert("请将鼠标移动到图片上")
+    </script>
+</body>
+
+</html>
